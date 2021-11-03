@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  /* COLORS */
+
+  /* PRIMARY COLORS */
+
+  --clr-bright-orange: hsl(31, 77%, 52%);
+  --clr-dark-cyan: hsl(184, 100%, 22%);
+  --clr-very-dark-cyan: hsl(179, 100%, 13%);
+
+  /* NEUTRAL COLORS */
+
+  --clr-transparent-white: hsla(0, 0%, 100%, 0.75);
+  --clr-very-light-gray: hsl(0, 0%, 95%);
+
+  /* FONTS */
+
+  --ff-main: "Big Shoulders Display", cursive;
+  --ff-submain: "Lexend Deca", sans-serif;
+}
+
+/* GENERAL STYLES */
+
+*,
+*::before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--clr-very-light-gray);
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  font-size: 15px;
+  font-family: var(--ff-main);
+}
+.container {
+  width: 750px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px 25px;
+}
+.sedans {
+  background-color: var(--clr-bright-orange);
+}
+.suvs {
+  background-color: var(--clr-dark-cyan);
+}
+.luxury {
+  background-color: var(--clr-very-dark-cyan);
+}
+.car {
+  width: 30%;
+}
+.title {
+  font-family: var(--ff-main);
+  color: var(--clr-very-light-gray);
+  text-transform: uppercase;
+}
+.intro {
+  font-family: var(--ff-submain);
+  color: var(--clr-very-light-gray);
+  padding-bottom: 40px;
+  line-height: 1.5;
+}
+
+.btn {
+  width: 80%;
+  border-style: none;
+  padding: 15px 20px;
+  background-color: var(--clr-very-light-gray);
+  border-radius: 30px;
+  color: var(--clr-very-light-gray);
+  cursor: pointer;
+}
+.btn-sedans {
+  color: var(--clr-bright-orange);
+}
+.btn-suvs {
+  color: var(--clr-dark-cyan);
+}
+.btn-luxury {
+  color: var(--clr-very-dark-cyan);
+}
+@media only screen and (max-width: 980px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 80%;
+    width: 500px;
+    height: max-content;
+    margin: 100px auto;
+    border-radius: 10px;
+  }
+  .card {
+    padding: 30px 55px;
+  }
+  .car {
+    padding-bottom: 30px;
+  }
+  .title {
+    padding-bottom: 20px;
+  }
+  .intro {
+    width: 90%;
+    line-height: 1.5;
+  }
+  .btn {
+    width: 50%;
+  }
+}
